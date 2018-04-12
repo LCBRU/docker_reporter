@@ -9,8 +9,8 @@ RUN apt-get update && \
         freetds-dev && \
     apt-get clean
 
-RUN svn export --force https://github.com/LCBRU/reporter/trunk/reporter/ /usr/src/app/
+RUN svn export --force https://github.com/LCBRU/reporter/trunk/ /usr/src/app/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD [ "python", "-u", "/usr/src/app/app.py" ]
+CMD [ "python", "-u", "/usr/src/app/uhl_reports.py" ]
